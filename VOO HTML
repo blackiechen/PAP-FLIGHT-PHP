@@ -1,0 +1,107 @@
+<html>
+<title>Voo</title>
+
+<head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+	  background-image: url("airlines.avif");
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+	 
+	fieldset {
+      border: 1px solid black;
+      height: 200px;
+      width: 80%;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+	form {
+      display: flex;
+	  width: 700px;
+      flex-wrap: wrap;
+	  justify-content: center;
+      align-items: center;
+    }
+  </style>
+<div class="logo-container">
+  <img src="thumbnail2.jpg" alt="Logo">
+  <h3 style="color:brown;"><span class="highlight">Agencia Chibi</span></h3>
+</div><hr>
+<link rel="stylesheet" type="text/css" href="logo.css">
+
+</head>
+<body >
+<form action="flight.php" method="post" style="margin:auto;">
+<div  class="container">
+  <b><h2> Please select your preferred Class:</h2></b>
+  <input type="radio" id="First Class" name="class" value="First Class">
+  <label for="First Class">First class</label><br>
+  <input type="radio" id="Business Class" name="class" value="Business Class">
+  <label for="Business Class">Business Class</label><br>
+  <input type="radio" id="Economy Class" name="class" value="Economy Class">
+  <label for="Economy Class">Economy Class</label><br><br>
+  <b>Baggage:</b>
+ <input type="number" name="baggage" min="0" max="5" step="1"
+ value="0"><br><br>
+ <b>Hand baggage:</b>
+ <input type="number" name="handbag" min="0" max="2" step="1"
+ value="0">
+ <br><br>
+ <b><p>Please select your preferred Airline:</p></b>
+  <input type="radio" id="TAP" name="airline" value="TAP">
+  <label for="TAP">TAP</label><br>
+  <input type="radio" id="Emirates" name="airline" value="Emirates">
+  <label for="Emirates">Emirates</label><br>
+  <input type="radio" id="united" name="airline" value="United Airlines">
+  <label for="united">United Airlines</label><br> 
+  <input type="radio" id="maroc" name="airline" value="Air Maroc">
+  <label for="maroc">Royal Air Maroc</label><br>
+  <input type="radio" id="france" name="airfrance" value="Air France">
+  <label for="airfrance">Air France</label><br>
+  <input type="radio" id="brussels" name="airline" value="Brussels Airlines">
+  <label for="brussels">Brussels Airlines</label><br>
+  <input type="radio" id="turkish" name="airline" value="Turkish Airlines">
+  <label for="turkish">Turkish Airlines</label><br>
+  
+<input type="submit" value="Next">
+</div>
+</form> 
+</body>
+</html>

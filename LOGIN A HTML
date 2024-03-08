@@ -1,0 +1,20 @@
+<html>
+<title>Login Escola</title>
+<head>
+
+<link rel="stylesheet" type="text/css" href="logo.css">
+
+</head>
+
+<body style="background-image: url('airlines.avif'); background-repeat: no-repeat; background-size: cover;" >
+<fieldset style="background-color:89CFF0";>
+<form action="LoginA.php" method="post"style="text-align: center";>
+      Nome de utilizador: <input type="text"
+                           name="username"> <br><br>
+     Palavra-Passe: <input type="password" name="pass"> <br><br>
+			   <input type="submit" value="Entrar">
+			   <input type="reset" value="Limpar">
+</form>
+</fieldset>
+</body>
+</html>

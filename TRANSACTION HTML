@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Transaction Form</title>
+</head>
+<body>
+  <h1>Transaction Form</h1>
+  <form action="payment.php" method="post">
+  <label for="payment">Select a payment method:</label>
+  <select id="payment" name="payment">
+    <option value="MBWay">MBWay</option>
+    <option value="paypal">PayPal</option>
+    <option value="bank_transfer">Bank Transfer</option>
+  </select>
+    <label for="amount">Amount:</label>
+    <input type="text" name="amount" id="amount" required><br><br>
+
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

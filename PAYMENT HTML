@@ -1,0 +1,108 @@
+<html>
+<title>Transaction Form</title>
+
+<head>
+  <title>Flight Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+	  background-image: url("BackgroundA1.png");
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Flight Booking</h1>
+    <form action="payment.php" method="post">
+      <label for="amount">Amount</label>
+      <input type="text" id="amount" name="amount" required>
+      
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required>
+      
+      <label for="payment">Select a payment method:</label>
+      <select id="payment" name="payment" required>
+        <option value="">Select</option>
+        <option value="MBWay">MBWay</option>
+        <option value="PayPal">PayPal</option>
+        <option value="Bank Transfer">Bank Transfer</option>
+      </select><br>
+	  
+	   <label id="label1">Phone number: 968 418 679</label><br>
+      <label id="label2">Email: silvangelkadi@gmail.com</label><br>
+      <label id="label3">IBAN: PT50003300004556016115205</label><br>
+      
+      <input type="submit" value="Book Now">
+    </form>
+  </div>
+  
+   <script>
+    function toggleLabelVisibility() {
+      var selectElement = document.getElementById("payment");
+      var label1Element = document.getElementById("label1");
+      var label2Element = document.getElementById("label2");
+      var label3Element = document.getElementById("label3");
+
+      if (selectElement.value === "MBWay") {
+        label1Element.style.display = "block";
+        label2Element.style.display = "none";
+        label3Element.style.display = "none";
+      } else if (selectElement.value === "PayPal") {
+        label1Element.style.display = "none";
+        label2Element.style.display = "block";
+        label3Element.style.display = "none";
+      } else if (selectElement.value === "Bank Transfer") {
+        label1Element.style.display = "none";
+        label2Element.style.display = "none";
+        label3Element.style.display = "block";
+      } else {
+        label1Element.style.display = "block";
+        label2Element.style.display = "block";
+        label3Element.style.display = "block";
+      }
+    }
+
+    // Attach the toggleLabelVisibility function to the change event of the payment select element
+    var paymentElement = document.getElementById("payment");
+    paymentElement.addEventListener("change", toggleLabelVisibility);
+  </script>
+  
+</body>
+</html>

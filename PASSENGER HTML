@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+	  background-image: url("BackgroundA1.png");
+    }
+    .container {
+      background-color: #89CFF0;
+      width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="passenger.php" method="post">
+      <div class="form-group">
+        <label for="name">Name and Surname:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="idcard">Passport:</label>
+        <input type="file" id="idcard" name="idcard" accept=".pdf,.jpg,.jpeg,.png" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="adult">Adult:</label>
+        <input type="number" id="adult" name="adult" min="0" max="100" step="1" value="0">
+      </div>
+      
+      <div class="form-group">
+        <label for="kids">Children:</label>
+        <input type="number" id="kids" name="kids" min="0" max="100" step="1" value="0">
+      </div>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

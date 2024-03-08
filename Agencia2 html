@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+     background-image: url("BackgroundA1.png");
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      display: flex;
+	  width: 700px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    fieldset {
+      border: 1px solid black;
+      background-color: #FFFDD0;
+      height: 250px;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+ input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+	.image-container {
+        justify-content: center; /* Centers the images horizontally */
+        align-items: center; /* Centers the images vertically */
+		object-fit: cover; /* Adjust the image scaling as needed */
+    }
+    .image-container img {
+        width: 30.33%; /* Sets each image to take up one-third of the container */
+    }
+	.radio-container {
+       position: relative;
+      display: inline-block;
+    }
+    label {
+      position: relative;
+      cursor: pointer;
+    }
+    label img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Adjust the image scaling as needed */
+    }
+
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <form action="inserirdestinos.php" method="post">
+      <div >
+        <b>
+          <div class="container">
+            <input type="radio" name="goandcome" value="return" checked>
+            Return 
+            <input type="radio" name="goandcome" value="oneway"> One way
+            <br>
+            <label for="departure">Departure:</label>
+            <input type="date" id="departure" name="departure">
+            <label for="return">Return:</label>
+            <input type="date" id="return" name="return"><br>
+			
+            From:
+            <select name="origen">
+              <option value="Angola">Luanda, Angola</option>
+			  <option value="Angola">Benguela, Angola</option>
+              <option value="Australia">Sydney, Australia</option>
+			  <option value="Australia">Melbourne, Australia</option>
+              <option value="Belgium">Antuerpia, Belgium</option>
+			  <option value="Belgium">Bruges, Belgium</option>
+              <option value="China">Beijing, China</option>
+			  <option value="China">Shangai, China</option>
+              <option value="Denmark">Billund, Denmark</option>
+			  <option value="Denmark">Barcelona, Denmark</option>
+              <option value="France">Orly, France</option>
+              <option value="Fiji">Nadi, Fiji</option>
+              <option value="Germany">Frankfrut, Germany</option>
+			  <option value="Germany">Bonn, Germany</option>
+              <option value="India">Mumbai, India</option>
+			  <option value="India">Felhi, India</option>
+              <option value="Japan">Tokyo narita, Japan</option>
+			  <option value="Japan">Tokyo Haneda, Japan</option>
+              <option value="Namibia">Windhoek, Namibia</option>
+              <option value="Nepal">Pokhorai, Nepal</option>
+			  <option value="Nepal">Dharan, Nepal</option>
+              <option value="New Caledonia">Noumea, New Caledonia</option>
+              <option value="Nigeria">Lagos, Nigeria</option>
+			  <option value="Nigeria">Abuja, Nigeria</option>
+              <option value="Portugal">Lisboa, Portugal</option>
+			  <option value="Portugal">Porto, Portugal</option>
+              <option value="Pakistan">Lahore, Pakistan</option>
+			  <option value="Pakistan">Karachi, Pakistan</option>
+              <option value="South Africa">Johannesburg, South Africa</option>
+			  <option value="South Africa">Durban, South Africa</option>
+              <option value="South Korea">Busan Gimhae, South Korea</option>
+			  <option value="South Korea">Jeju, South Korea</option>
+              <option value="Spain">Madrid, Spain</option>
+			  <option value="Spain">Barcelona, Spain</option>
+              <option value="Tonga">Fau'anotou, Tonga</option>
+              <option value="Quenia">Nairobi, Quenia</option>
+            </select>
+            <br><br>
+          </div>
+        </b>
+        <br><br>
+        <div class="container">
+          <fieldset>
+            <legend>Africa</legend>
+			
+            <input type="radio" name="pais" value="South Africa" checked>
+            <label for="pais">South Africa</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Durban">
+            <label>DUR,Durban</label>
+            <img src="durban1.Webp" alt="Durban" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Johannesburg">
+            <label>JNB,Joburg</label>
+            <img src="Johannesburg1.Webp" alt="Johannesburg" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="Angola">
+            <label for="pais">Angola</label>
+			 <div class="image-container">
+            <input type="radio" name="cidade" value="Luanda">
+            <label>LAD,Luanda</label>
+			<img src="Luanda.jpg" alt="Luanda" width="10" height="200">
+            <input type="radio" name="cidade" value="Benguela">
+			<Label>BUG,Bengl</label>
+			<img src="Benguela.jpg" alt="Benguela" width="100" height="200">
+			</div>
+			</fieldset>
+		    </div>	
+			
+			<div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="Namibia">
+            <label for="pais">Namibia</label>
+			 <div class="image-container">
+            <input type="radio" name="cidade" value="Windhoek">
+            <label>WDH,Windhoek</label>
+			<img src="windhoek.jpg" alt="Durban" width="300" height="200">
+			</div>
+			</fieldset>
+		    </div>	
+			
+			<div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="Quenia">
+            <label for="pais">Quenia</label>
+			 <div class="image-container">
+            <input type="radio" name="cidade" value="Nairobi">
+            <label>HKJK,Nairobi</label>
+			<img src="Nairobi.jpg" alt="Nairobi" width="300" height="200">
+			</div>
+			</fieldset>
+		    </div>	
+			
+			<div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="Nigeria">
+            <label for="pais">Nigeria</label>
+			 <div class="image-container">
+            <input type="radio" name="cidade" value="Lagos">
+            <label>LOS,Lagos</label>
+			<img src="lagos.jpg" alt="Nairobi" width="300" height="200">
+			<input type="radio" name="cidade" value="Abuja">
+            <label>ABV,Abuja</label>
+			<img src="abuja1.jpg" alt="Nairobi" width="300" height="200">
+			</div>
+			</fieldset>
+		    </div>	
+
+            <div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="Tunisia">
+            <label for="pais">Tunisia</label>
+			<div class="image-container">
+            <input type="radio" name="cidade" value="Monaster">
+            <label>MIR,Monaster</label>
+			<img src="Monaster1.avif" alt="Nairobi" width="300" height="200">
+			</div>
+			</fieldset>
+		    </div>
+          </fieldset>
+		  
+		  <div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="Nigeria">
+            <label for="pais">Nigeria</label>
+			 <div class="image-container">
+            <input type="radio" name="cidade" value="Lagos">
+            <label>Lagos</label>
+			<img src="lagos.jpg" alt="Nairobi" width="300" height="200">
+			<input type="radio" name="cidade" value="Abuja">
+            <label>Abuja</label>
+			<img src="abuja1.jpg" alt="Nairobi" width="300" height="200">
+			</div>
+			</fieldset>
+		    </div>
+			<input type="submit" value="Next">
+			<hr><hr>
+			
+			
+			<div class="container">
+            <fieldset>
+            <legend>Europe</legend>
+			
+            <input type="radio" name="pais" value="Germany" checked>
+            <label for="pais">Germany</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Frankfurt">
+            <label>FRA,Frankfurt</label>
+            <img src="frankfurt1.jpg" alt="Durban" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Bonn">
+            <label>CGN,Bonn</label>
+            <img src="bonn1.jpg" alt="Bonn" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			 
+		    <div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="Belgium" checked>
+            <label for="pais">Belgium</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Bruges">
+            <label> FIR,Bruges</label>
+            <img src="Antwerp.jpg" alt="Durban" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Antuerpia">
+            <label>ANR,Antwerp</label>
+            <img src="bruges.jpg" alt="Bonn" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+			<fieldset>
+            <input type="radio" name="pais" value="France">
+            <label for="pais">France</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Orly">
+            <label>ORY,Orly</label>
+            <img src="orly.webp" alt="Durban" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+					
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="Spain">
+            <label for="pais">Spain</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Madrid">
+            <label>MAD,Madrid</label>
+            <img src="Madrid.jpg" alt="Durban" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Barcelona">
+            <label>BCN,Barna</label>
+            <img src="barcelona.jpg" alt="Bonn" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="Denmark">
+            <label for="pais">Denmark</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Billund">
+            <label>BLL,Billund</label>
+            <img src="billund.jpg" alt="Durban" width="300" height="150">
+
+            <input type="radio" name="cidade" value="Odense">
+            <label>ODE,Odense</label>
+            <img src="Odense.jpg" alt="Bonn" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="Croatia">
+            <label for="pais">Croatia</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Rijeka">
+            <label>RJK,Rijeka</label>
+            <img src="Rijeka.jpg" alt="Durban" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Osijek">
+            <label>HRV,Osijek</label>
+            <img src="Osijek.webp" alt="Bonn" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+
+            <input type="submit" value="Next">
+          </fieldset>
+		  <hr><hr>
+		  
+		   <div class="container">
+          <fieldset>
+            <legend>Asia</legend>
+			
+            <input type="radio" name="pais" value="India">
+            <label for="pais">India</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Mumbai">
+            <label>BOM,Mumbai</label>
+            <img src="Mumbai.jpg" alt="Mumbai" width="300" height="170">
+
+            <input type="radio" name="cidade" value="Delhi">
+            <label>DEL,Delhi</label>
+            <img src="Delhi.jpg" alt="Delhi" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="China">
+            <label for="pais">China</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Beijing">
+            <label>PEK,Beijing</label>
+            <img src="Beijing.jpg" alt="Beijing" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Shanghai">
+            <label>PVG,Sh.ghai</label>
+            <img src="Shanghai.jpg" alt="Shanghai" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="Japan">
+            <label for="pais">Japan</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Tokyo narita">
+            <label>NRT,Narita</label>
+            <img src="Tokyo narita.jpg" alt="Tokyo narita" width="200" height="150">
+
+            <input type="radio" name="cidade" value="Tokyo Haneda">
+            <label>HND,Haneda</label>
+            <img src="Tokyo Haneda.jpg" alt="Tokyo Haneda" width="200" height="150">
+            </div>
+			</fieldset>
+			</div>
+			
+			
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="South Korea">
+            <label for="pais">South Korea</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Busan Gimhae">
+            <label>PUS,GIMPO</label>
+            <img src="Rijeka.jpg" alt="Busan Gimhae" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Jeju">
+            <label>CJU,Jeju</label>
+            <img src="Osijek.webp" alt="Jeju" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+            <input type="submit" value="Next">
+            <hr><hr>
+            
+			<div class="container">
+            <fieldset>
+			<legend>Oceania</legend>
+			
+            <input type="radio" name="pais" value="Australia">
+            <label for="pais">Australia</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Sydney">
+            <label>CYD,Sydney</label>
+            <img src="Sydney.jpg" alt="Sydney" width="300" height="200">
+
+            <input type="radio" name="cidade" value="Melbourne">
+            <label>MEL,Melbr</label>
+            <img src="Melbourne.jpg" alt="Melbourne" width="300" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="New Caledonia">
+            <label for="pais">New Caledonia</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Noumea">
+            <label>PCD,Noumea</label>
+            <img src="Noumea.jpg" alt="Noumea" width="400" height="200">
+            </div>
+			</fieldset>
+			</div>
+			
+			<div class="container">
+            <fieldset>
+			
+            <input type="radio" name="pais" value="Tonga">
+            <label for="pais">Tonga</label><br>
+            <div class="image-container">
+            <input type="radio" name="cidade" value="Fau'anotou">
+            <label>TBU,Fau'anotou</label>
+            <img src="Fau'anotou.jpg" alt="Fau'anotou" width="300" height="150">
+            </div>
+			</fieldset>
+			</div>
+
+            <input type="submit" value="Next">
+          </fieldset>
+        </div>
+    </form>
+	
+
+</body>
+</html>
